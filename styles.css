@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #f8bbd0; /* Light pastel pink for the navbar */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h2 {
+    color: #5f2d55; /* Darker pink/purple for the logo/title */
+    font-size: 28px;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White for the text */
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #d291bc; /* Slightly darker pastel pink for menu items */
+    border-radius: 25px; /* Rounded edges */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+header nav ul li a:hover {
+    background-color: #c374a5; /* Darker pink for hover effect */
+    color: white; /* Keep text white on hover */
+}
+
+    .hero {
+        background-color: #fce4ec; /* Light pink fallback */
+        background-image: url('img/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5f2d55;
+        text-align: center;
+    }
+    
+    .hero-content {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #5f2d55;
+      
+    }
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #d291bc; /* Pastel pink button */
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+
+.hero button:hover {
+    background-color: #c374a5; /* Slightly darker pink on hover */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Product Styling */
+.product {
+    background-color: white;
+    border-radius: 15px; /* Rounded corners */
+    border: none; /* Remove border for a cleaner look */
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Product Image Hover Effect */
+.product img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Add smooth zoom effect on hover */
+}
+
+/* Hover Effect on Entire Product Card */
+.product:hover {
+    transform: scale(1.05); /* Slight scale effect to give "breathing" feel */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow depth on hover */
+}
+
+/* Image Zoom Effect on Hover */
+.product:hover img {
+    transform: scale(1.1); /* Zoom the image slightly on hover */
+}
+
+/* Add a background pulse effect */
+.product::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: rgba(210, 145, 188, 0.3); /* Light pink pulse background */
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Background pulse effect on hover */
+.product:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0; /* Fades out */
+}
+
+/* Product Title Styling */
+.product h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #5f2d55; /* Darker pink/purple text to match theme */
+}
+
+/* Product Description Styling */
+.product p {
+    font-size: 16px;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* Price Styling */
+.product .price {
+    font-size: 22px;
+    color: #d291bc; /* Price color to match theme */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #5f2d55;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+footer ul li a:hover {
+    color: #d291bc; /* Hover effect matches the theme */
+}
